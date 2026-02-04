@@ -12,14 +12,34 @@ import SwiftUI
 class GameViewModel {
     var joystickInput: CGPoint = .zero
     var cubeEntity: Entity?
+    var controllerType: ControllerType = .custom {
+        didSet {
+            joystickInput = .zero
+            switch controllerType {
+            case .custom:
+                virtualControllerManager.unregister()
+            case .gcVirtual:
+                virtualControllerManager.register()
+            }
+        }
+    }
 
+    let virtualControllerManager = VirtualController()
     private let moveSpeed: Float = 0.02
 
     func updateEntityPosition() {
         guard let entity = cubeEntity else { return }
 
-        let deltaX = Float(joystickInput.x) * moveSpeed
-        let deltaZ = Float(-joystickInput.y) * moveSpeed
+        let input: CGPoint
+        switch controllerType {
+        case .custom:
+            input = joystickInput
+        case .gcVirtual:
+            input = virtualControllerManager.joystickInput
+        }
+
+        let deltaX = Float(input.x) * moveSpeed
+        let deltaZ = Float(-input.y) * moveSpeed
 
         entity.position.x += deltaX
         entity.position.z += deltaZ

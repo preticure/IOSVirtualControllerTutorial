@@ -1,5 +1,5 @@
 //
-//  JoystickView.swift
+//  ControllerView.swift
 //  IOSVirtualControllerTutorial
 //
 //  Created by preticure on 2026/02/04.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JoystickView: View {
+struct CustomControllerView: View {
     @Binding var joystickInput: CGPoint
 
     private let outerRadius: CGFloat = 75
@@ -61,12 +61,5 @@ struct JoystickView: View {
                     joystickInput = .zero
                 }
         )
-    }
-}
-
-#Preview {
-    ZStack {
-        Color.gray
-        JoystickView(joystickInput: .constant(.zero))
     }
 }

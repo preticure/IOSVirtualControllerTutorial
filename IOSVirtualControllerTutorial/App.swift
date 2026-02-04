@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 @main
-class IOSVirtualControllerTutorial: UIResponder, UIApplicationDelegate {
+class App: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
