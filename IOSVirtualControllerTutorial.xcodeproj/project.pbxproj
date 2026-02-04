@@ -6,14 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B99CF9862F33041000C22E32 /* .swift-format in Resources */ = {isa = PBXBuildFile; fileRef = B99CF9852F33041000C22E32 /* .swift-format */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		B92F9F462F32538B00F12707 /* IOSVirtualController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSVirtualController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92F9F462F32538B00F12707 /* IOSVirtualControllerTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = IOSVirtualControllerTutorial.app; path = "/Users/preticure/IOSVirtualControllerTutorial/build/Debug-iphoneos/IOSVirtualControllerTutorial.app"; sourceTree = "<absolute>"; };
+		B99CF9852F33041000C22E32 /* .swift-format */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-format"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B92F9F482F32538B00F12707 /* IOSVirtualController */ = {
+		B92F9F482F32538B00F12707 /* IOSVirtualControllerTutorial */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IOSVirtualController;
+			path = IOSVirtualControllerTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,25 +37,17 @@
 		B92F9F3D2F32538B00F12707 = {
 			isa = PBXGroup;
 			children = (
-				B92F9F482F32538B00F12707 /* IOSVirtualController */,
-				B92F9F472F32538B00F12707 /* Products */,
+				B92F9F482F32538B00F12707 /* IOSVirtualControllerTutorial */,
+				B99CF9852F33041000C22E32 /* .swift-format */,
 			);
-			sourceTree = "<group>";
-		};
-		B92F9F472F32538B00F12707 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B92F9F462F32538B00F12707 /* IOSVirtualController.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B92F9F452F32538B00F12707 /* IOSVirtualController */ = {
+		B92F9F452F32538B00F12707 /* IOSVirtualControllerTutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B92F9F512F32538C00F12707 /* Build configuration list for PBXNativeTarget "IOSVirtualController" */;
+			buildConfigurationList = B92F9F512F32538C00F12707 /* Build configuration list for PBXNativeTarget "IOSVirtualControllerTutorial" */;
 			buildPhases = (
 				B92F9F422F32538B00F12707 /* Sources */,
 				B92F9F432F32538B00F12707 /* Frameworks */,
@@ -61,13 +58,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B92F9F482F32538B00F12707 /* IOSVirtualController */,
+				B92F9F482F32538B00F12707 /* IOSVirtualControllerTutorial */,
 			);
-			name = IOSVirtualController;
+			name = IOSVirtualControllerTutorial;
 			packageProductDependencies = (
 			);
 			productName = IOSVirtualController;
-			productReference = B92F9F462F32538B00F12707 /* IOSVirtualController.app */;
+			productReference = B92F9F462F32538B00F12707 /* IOSVirtualControllerTutorial.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +82,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B92F9F412F32538B00F12707 /* Build configuration list for PBXProject "IOSVirtualController" */;
+			buildConfigurationList = B92F9F412F32538B00F12707 /* Build configuration list for PBXProject "IOSVirtualControllerTutorial" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -95,11 +92,11 @@
 			mainGroup = B92F9F3D2F32538B00F12707;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B92F9F472F32538B00F12707 /* Products */;
+			productRefGroup = B92F9F3D2F32538B00F12707;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B92F9F452F32538B00F12707 /* IOSVirtualController */,
+				B92F9F452F32538B00F12707 /* IOSVirtualControllerTutorial */,
 			);
 		};
 /* End PBXProject section */
@@ -109,6 +106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99CF9862F33041000C22E32 /* .swift-format in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +315,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B92F9F412F32538B00F12707 /* Build configuration list for PBXProject "IOSVirtualController" */ = {
+		B92F9F412F32538B00F12707 /* Build configuration list for PBXProject "IOSVirtualControllerTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B92F9F4F2F32538C00F12707 /* Debug */,
@@ -326,7 +324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B92F9F512F32538C00F12707 /* Build configuration list for PBXNativeTarget "IOSVirtualController" */ = {
+		B92F9F512F32538C00F12707 /* Build configuration list for PBXNativeTarget "IOSVirtualControllerTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B92F9F522F32538C00F12707 /* Debug */,
