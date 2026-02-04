@@ -20,13 +20,14 @@ class VirtualController {
 
         virtualController = GCVirtualController(configuration: virtualConfiguration)
 
-        virtualController?.connect { [weak self] error in
-            if let error {
-                print("Failed to connect virtual controller: \(error)")
-                return
+        virtualController?
+            .connect { [weak self] error in
+                if let error {
+                    print("Failed to connect virtual controller: \(error)")
+                    return
+                }
+                self?.setupHandlers()
             }
-            self?.setupHandlers()
-        }
     }
 
     func unregister() {

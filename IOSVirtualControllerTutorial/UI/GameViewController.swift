@@ -1,5 +1,5 @@
 //
-//  GameContainerViewController.swift
+//  GameViewController.swift
 //  IOSVirtualControllerTutorial
 //
 //  Created by preticure on 2026/02/04.
@@ -26,7 +26,7 @@ class GameViewController: GCEventViewController {
             hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 }

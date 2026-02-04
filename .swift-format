@@ -3,18 +3,18 @@
     "accessLevel" : "private"
   },
   "indentConditionalCompilationBlocks" : true,
-  "indentSwitchCaseLabels" : false,
+  "indentSwitchCaseLabels" : true,
   "indentation" : {
     "spaces" : 4
   },
-  "lineBreakAroundMultilineExpressionChainComponents" : false,
-  "lineBreakBeforeControlFlowKeywords" : false,
+  "lineBreakAroundMultilineExpressionChainComponents" : true,
+  "lineBreakBeforeControlFlowKeywords" : true,
   "lineBreakBeforeEachArgument" : false,
   "lineBreakBeforeEachGenericRequirement" : false,
   "lineBreakBetweenDeclarationAttributes" : false,
   "lineLength" : 100,
   "maximumBlankLines" : 1,
-  "multiElementCollectionTrailingCommas" : true,
+  "multiElementCollectionTrailingCommas" : false,
   "noAssignmentInExpressions" : {
     "allowedFunctions" : [
       "XCTAssertNoThrow"
@@ -69,7 +69,7 @@
     "ValidateDocumentationComments" : false
   },
   "spacesAroundRangeFormationOperators" : false,
-  "spacesBeforeEndOfLineComments" : 2,
+  "spacesBeforeEndOfLineComments" : 4,
   "tabWidth" : 8,
   "version" : 1
 }

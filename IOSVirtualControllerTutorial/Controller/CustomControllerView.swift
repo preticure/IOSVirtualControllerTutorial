@@ -41,7 +41,8 @@ struct CustomControllerView: View {
 
                     if distance <= maxDistance {
                         stickPosition = CGPoint(x: translation.width, y: translation.height)
-                    } else {
+                    }
+                    else {
                         let angle = atan2(translation.height, translation.width)
                         stickPosition = CGPoint(
                             x: cos(angle) * maxDistance,

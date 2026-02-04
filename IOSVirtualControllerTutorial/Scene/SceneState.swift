@@ -1,5 +1,5 @@
 //
-//  GameViewModel.swift
+//  SceneState.swift
 //  IOSVirtualControllerTutorial
 //
 //  Created by preticure on 2026/02/04.
@@ -9,7 +9,7 @@ import RealityKit
 import SwiftUI
 
 @Observable
-class GameViewModel {
+class SceneState {
     var joystickInput: CGPoint = .zero
     var cubeEntity: Entity?
     var cameraEntity: Entity?
@@ -20,10 +20,10 @@ class GameViewModel {
         didSet {
             joystickInput = .zero
             switch controllerType {
-            case .custom:
-                virtualControllerManager.unregister()
-            case .gcVirtual:
-                virtualControllerManager.register()
+                case .custom:
+                    virtualControllerManager.unregister()
+                case .gcVirtual:
+                    virtualControllerManager.register()
             }
         }
     }
@@ -36,10 +36,10 @@ class GameViewModel {
 
         let input: CGPoint
         switch controllerType {
-        case .custom:
-            input = joystickInput
-        case .gcVirtual:
-            input = virtualControllerManager.joystickInput
+            case .custom:
+                input = joystickInput
+            case .gcVirtual:
+                input = virtualControllerManager.joystickInput
         }
 
         let rotationY = Float(input.x) * rotationSpeed

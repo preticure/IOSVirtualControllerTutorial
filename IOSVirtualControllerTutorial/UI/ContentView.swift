@@ -9,7 +9,7 @@ import RealityKit
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = GameViewModel()
+    @State private var sceneState = SceneState()
     @State private var dragStartAngle: CGPoint = .zero
 
     var body: some View {
@@ -25,36 +25,36 @@ struct ContentView: View {
                     )
 
                     content.add(model)
-                    viewModel.cubeEntity = model
+                    sceneState.cubeEntity = model
 
                     let camera = Entity()
                     camera.components.set(PerspectiveCameraComponent())
-                    camera.position = [0, 0, viewModel.cameraDistance]
+                    camera.position = [0, 0, sceneState.cameraDistance]
                     camera.look(at: [0, 0, 0], from: camera.position, relativeTo: nil)
                     content.add(camera)
-                    viewModel.cameraEntity = camera
+                    sceneState.cameraEntity = camera
                 }
                 .onChange(of: timeline.date) {
-                    viewModel.updateEntityRotation()
-                    viewModel.updateCameraPosition()
+                    sceneState.updateEntityRotation()
+                    sceneState.updateCameraPosition()
                 }
                 .gesture(
                     DragGesture()
                         .onChanged { value in
                             let sensitivity: CGFloat = 0.01
-                            viewModel.cameraAngle = CGPoint(
+                            sceneState.cameraAngle = CGPoint(
                                 x: dragStartAngle.x + value.translation.width * sensitivity,
                                 y: dragStartAngle.y - value.translation.height * sensitivity
                             )
                         }
                         .onEnded { _ in
-                            dragStartAngle = viewModel.cameraAngle
+                            dragStartAngle = sceneState.cameraAngle
                         }
                 )
             }
 
             VStack {
-                Picker("Controller", selection: $viewModel.controllerType) {
+                Picker("Controller", selection: $sceneState.controllerType) {
                     ForEach(ControllerType.allCases, id: \.self) { type in
                         Text(type.rawValue).tag(type)
                     }
@@ -65,9 +65,9 @@ struct ContentView: View {
 
                 Spacer()
 
-                if viewModel.controllerType == .custom {
+                if sceneState.controllerType == .custom {
                     HStack {
-                        CustomControllerView(joystickInput: $viewModel.joystickInput)
+                        CustomControllerView(joystickInput: $sceneState.joystickInput)
                             .padding(40)
                         Spacer()
                     }
@@ -75,7 +75,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            viewModel.controllerType = .gcVirtual
+            sceneState.controllerType = .gcVirtual
         }
     }
 }
